@@ -1,7 +1,7 @@
 "use strict";
 
 
-describe(`Home page`, function (){
+describe(`Home page 2`, function (){
 
     it('test 3', function () {
         const firstSong = $$('.track-card__username').first();
