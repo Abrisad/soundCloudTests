@@ -3,7 +3,7 @@
 exports.config = {
   baseUrl: 'https://soundcloud-ngrx.herokuapp.com',
 
-  specs: ['./specs/*_spec.js'],
+  specs: ['./specs/detailsPage_spec.js'],
 
   directConnect: true,
 
