@@ -1,20 +1,24 @@
 "use strict";
 
-console.log('BLABLABLA STARTING PRORACTOR!')
-
 exports.config = {
-  specs: ['*_spec.js'],
+  baseUrl: 'https://soundcloud-ngrx.herokuapp.com',
+
+  specs: ['./specs/*_spec.js'],
+
   directConnect: true,
+
   framework: 'jasmine2',
+
   capabilities: {
     'browserName': 'chrome'
   },
+
   useAllAngular2AppRoots: true,
 
   onPrepare: function () {
 
     beforeEach(function () {
-        browser.get('https://soundcloud-ngrx.herokuapp.com/');
+        browser.get('/');
     });
 
     afterEach(function () {
