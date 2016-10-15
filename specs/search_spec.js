@@ -1,18 +1,19 @@
 "use strict";
+let HomePage = require('../src/pageObjects/HomePage');
+let SearchPage = require('../src/pageObjects/SearchPage');
 
 describe(`Searching: `, function (){
+    let homePage = new HomePage();
+    let searchPage = new SearchPage();
+
     it('simple search should be successful', function () {
-        $('.btn--search-alt').click();
-        browser.sleep(2000);
-
         let searchRequest = 'Test';
-        $('input.search-form__input').sendKeys(searchRequest).submit();
-        browser.sleep(5000); //Search might take some time
+        homePage.search(searchRequest);
 
-        expect($$('track-card').first().getText())
+        expect(searchPage.tracks(0).getTrackInfo())
             .toMatch(searchRequest, 'First search result should contain what we searched.');
         
-        expect($('content-header h1').getText())
+        expect(searchPage.getHeaderTitle())
             .toBe(searchRequest, 'Page title should contain search request');
     });
     
