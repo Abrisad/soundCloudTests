@@ -1,4 +1,6 @@
 "use strict";
+
+//Importing needed pageobjects
 let HomePage = require('../src/pageObjects/HomePage');
 
 describe(`Home page:`, function (){

@@ -1,9 +1,11 @@
 "use strict";
 
+//Importing needed pageobjects
 let HomePage = require('../src/pageObjects/HomePage');
 let DetailsPage = require('../src/pageObjects/DetailsPage');
 
 describe(`Artist details page:`, function (){
+    // Initialization of PageObjects.
     let homePage = new HomePage();
     let detailsPage = new DetailsPage();
 
